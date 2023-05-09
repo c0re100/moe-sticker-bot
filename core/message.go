@@ -41,10 +41,6 @@ Hello! I'm husky_sticker_bot (Powered By Waifu2x)! Please use a command above or
 func sendAboutMessage(c tele.Context) {
 	c.Send(fmt.Sprintf(`
 @%s by husky
-<b>Please star for this project on Github if you like this bot!
-如果您喜歡這個bot, 歡迎在Github給本專案標Star喔!
-https://github.com/c0re100/moe-sticker-bot</b>
-Thank you @StickerGroup for feedbacks and advices!
 <code>
 This free(as in freedom) software is released under the GPLv3 License.
 Comes with ABSOLUTELY NO WARRANTY! All rights reserved.
@@ -62,9 +58,6 @@ Version:版本: %s
 func sendFAQ(c tele.Context) {
 	c.Send(fmt.Sprintf(`
 @%s by husky
-<b>Please hit Star for this project on Github if you like this bot!
-如果您喜歡這個bot, 歡迎在Github給本專案標Star喔!
-https://github.com/star-39/moe-sticker-bot</b>
 ------------------------------------
 <b>Q: I got stucked! I can't quit from command!
 我卡住了! 我沒辦法從指令中退出!</b>
@@ -150,7 +143,7 @@ No one else could see or use the stored user identifier.
 All the data being stored is encrypted.
 This bot will never share any of the stored data to anyone or to anywhere else.
 The bot server is physically located at Osaka,Japan. Local laws might apply.
-This bot is free and open source software, you can see https://github.com/star-39/moe-sticker-bot/blob/master/core/database.go
+This bot is free and open source software, you can see https://github.com/c0re100/moe-sticker-bot/blob/master/core/database.go
 to investigate how the bot store and process the stored data.
 
 <b>私隱聲明:</b>
@@ -164,8 +157,7 @@ to investigate how the bot store and process the stored data.
 
 本bot儲存的所有資訊均經過加密。
 本bot不會分享任何儲存的資訊給任何人或實體或到任何地方。
-本bot伺服器的物理位置位於日本大阪。 當地法律可能適用。
-本bot為自由開放原始碼軟體，請參閱 https://github.com/star-39/moe-sticker-bot/blob/master/core/database.go
+本bot為自由開放原始碼軟體，請參閱 https://github.com/c0re100/moe-sticker-bot/blob/master/core/database.go
 來了解bot如何儲存和處理儲存的資訊。
 `, tele.ModeHTML, tele.NoPreview)
 }
