@@ -23,13 +23,13 @@ func sendStartMessage(c tele.Context) error {
 <b>/faq  /about  /changelog  /privacy</b><code>
 常見問題/關於/更新紀錄/私隱</code>
 
-Hello! I'm <a href="https://github.com/star-39/moe-sticker-bot">moe_sticker_bot</a>! Please use a command above or:
+Hello! I'm husky_sticker_bot (Powered By Waifu2x)! Please use a command above or:
 • Send <b>LINE/Kakao sticker share link</b> to import or download.
 • Send <b>Telegram sticker/link/GIF</b> to download or export to WhatsApp.
 • Send <b>keywords</b> to search titles.
 • Send <b>/create</b> or <b>/manage</b> to create or manage sticker set.
 
-你好! 歡迎使用<a href="https://github.com/star-39/moe-sticker-bot">萌萌貼圖BOT</a>! 請從上方點選指令或：
+你好! 歡迎使用 Husky Sticker Bot (Powered By Waifu2x)! 請從上方點選指令或：
 • 傳送<b>LINE/kakao貼圖包的分享連結</b>來匯入或下載.
 • 傳送<b>Telegram貼圖/連結/GIF</b>來下載或匯出到WhatsApp.
 • 傳送<b>關鍵字</b>來搜尋貼圖包.
@@ -40,10 +40,10 @@ Hello! I'm <a href="https://github.com/star-39/moe-sticker-bot">moe_sticker_bot<
 
 func sendAboutMessage(c tele.Context) {
 	c.Send(fmt.Sprintf(`
-@%s by @plow283
+@%s by husky
 <b>Please star for this project on Github if you like this bot!
 如果您喜歡這個bot, 歡迎在Github給本專案標Star喔!
-https://github.com/star-39/moe-sticker-bot</b>
+https://github.com/c0re100/moe-sticker-bot</b>
 Thank you @StickerGroup for feedbacks and advices!
 <code>
 This free(as in freedom) software is released under the GPLv3 License.
@@ -61,7 +61,7 @@ Version:版本: %s
 
 func sendFAQ(c tele.Context) {
 	c.Send(fmt.Sprintf(`
-@%s by @plow283
+@%s by husky
 <b>Please hit Star for this project on Github if you like this bot!
 如果您喜歡這個bot, 歡迎在Github給本專案標Star喔!
 https://github.com/star-39/moe-sticker-bot</b>
@@ -501,7 +501,7 @@ func sendFatalError(err error, c tele.Context) {
 
 	c.Send("<b>Fatal error encounterd. Please try again. /start\n"+
 		"發生嚴重錯誤. 請您從頭再試一次. /start </b>\n\n"+
-		"You can report this error to @plow283 or https://github.com/star-39/moe-sticker-bot/issues\n\n"+
+		"You can report this error to https://github.com/c0re100/moe-sticker-bot/issues\n\n"+
 		"<code>"+errMsg+"</code>", tele.ModeHTML, tele.NoPreview)
 }
 

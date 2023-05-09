@@ -7,3 +7,6 @@ __debug*
 .DS_Store
 deploy.yaml
 tmp/
+/cmd/moe-sticker-bot/msb/*
+/cmd/moe-sticker-bot/models/*
+.idea/*

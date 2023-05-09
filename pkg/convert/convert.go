@@ -1,7 +1,9 @@
 package convert
 
 import (
+	"bufio"
 	"errors"
+	"image"
 	"os"
 	"os/exec"
 	"runtime"
@@ -74,11 +76,23 @@ func CheckDeps() []string {
 	return unfoundBins
 }
 
+func getImageWH(f string) (int, int) {
+	input, _ := os.Open(f)
+	reader := bufio.NewReader(input)
+	config, _, _ := image.DecodeConfig(reader)
+	return config.Width, config.Height
+}
+
 func IMToWebp(f string) (string, error) {
+	w, h := getImageWH(f)
 	pathOut := f + ".webp"
-	bin := CONVERT_BIN
-	args := CONVERT_ARGS
-	args = append(args, "-resize", "512x512", "-filter", "Lanczos", "-define", "webp:lossless=true", f+"[0]", pathOut)
+	bin := "waifu2x-caffe-cui"
+	var args []string
+	if w >= h {
+		args = append(args, "-i", f, "-m", "noise_scale", "-w", "512", "--noise_level", "3", "-o", pathOut)
+	} else {
+		args = append(args, "-i", f, "-m", "noise_scale", "-h", "512", "--noise_level", "3", "-o", pathOut)
+	}
 
 	out, err := exec.Command(bin, args...).CombinedOutput()
 	if err != nil {
